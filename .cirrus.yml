@@ -1,23 +1,23 @@
 env:
     OEM: realme
-    CODENAME: RMX2020
+    CODENAME: RMX1901
     CIRRUS_CI: true
     CIRRUS_SHELL: bash
     TARGET: m bacon -j16
-    ROM_NAME: lineage
-    PRODUCT_NAME: lineage_RMX2020
+    ROM_NAME: octavi
+    PRODUCT_NAME: octavi_RMX1901
     VARIANT: userdebug
-    ROM_REPO: "https://github.com/crdroidandroid/android.git"
-    ROM_BRANCH: 13.0 --git-lfs
-    DEVICE_REPO: "https://github.com/SatoruGojo2k23/device_realme_RMX2020"
-    DEVICE_BRANCH: crdroid-13.0
-    VENDOR_REPO: "https://github.com/ArrowOS-Devices/android_vendor_realme_RMX2020"
-    VENDOR_BRANCH: arrow-13.0
-    KERNEL_REPO: "https://github.com/ArrowOS-Devices/android_kernel_realme_RMX2020"
-    KERNEL_BRANCH: arrow-13.0
-    USERNAME: satorugojo2k23
-    USERMAIL: satorugojo4200@gmail.com
-    OUTPUT: crDroid*.zip
+    ROM_REPO: "https://github.com/Octavi-Staging/android_manifest.git"
+    ROM_BRANCH: thirteen
+    DEVICE_REPO: "https://github.com/shravansayz/device_realme_RMX1901"
+    DEVICE_BRANCH: octavi
+    VENDOR_REPO: "https://github.com/SlicKker-001/device_realme_RMX1901"
+    VENDOR_BRANCH: 13
+    KERNEL_REPO: "https://github.com/ashim-anwar/kernel_realme_RMX1901"
+    KERNEL_BRANCH: x.337-KSU
+    USERNAME: sksayz5
+    USERMAIL: sksayz5@gmail.com
+    OUTPUT: OctaviOS*.zip
     
 task:
   name: "ROM Build"
@@ -39,10 +39,10 @@ task:
   #  fi    
 
   SYNC_SCRIPT_script:
-      - curl -sL https://raw.githubusercontent.com/SatoruGojo2k23/ROMBuilder-CI/crdroid-13.0/scripts/sync_rom.sh | bash
+      - curl -sL https://raw.githubusercontent.com/sksayz5/ROM-Builder-CI/main/scripts/build_rom.sh | bash
       
   BUILD_SCRIPT_script:
-      - curl -sL https://raw.githubusercontent.com/SatoruGojo2k23/ROMBuilder-CI/crdroid-13.0/scripts/build_rom.sh | bash
+      - curl -sL https://raw.githubusercontent.com/sksayz5/ROMBuilder-CI/main/scripts/build_rom.sh | bash
       
   UPLOAD_SCRIPT_script:
-      - curl -sL https://raw.githubusercontent.com/SatoruGojo2k23/ROMBuilder-CI/crdroid-13.0/scripts/upload_rom.sh | bash
+      - curl -sL https://raw.githubusercontent.com/sksayz5/ROMBuilder-CI/main/scripts/upload_rom.sh | bash
